@@ -1,0 +1,15 @@
+def calculadora():
+    print("Calculadora simple. Escribe 'salir' para terminar.")
+    while True:
+        operacion = input("Ingresa una operación (ejemplo: 2 + 2): ")
+        if operacion.lower() == 'salir':
+            print("¡Hasta luego!")
+            break
+        try:
+            resultado = eval(operacion)
+            print(f"Resultado: {resultado}")
+        except Exception as e:
+            print("Operación no válida. Intenta de nuevo.")
+
+if __name__ == "__main__":
+    calculadora()
